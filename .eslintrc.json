@@ -1,0 +1,42 @@
+{
+     "extends": [
+          //Here I´m telling it to extend the functionality of these plugins or libraries
+          "eslint:recommended",
+          "plugin:import/errors",
+          "plugin:react/recommended" //Here I´m telling eslint to use the recommended rules for this plugin
+     ],
+     "rules": {
+          "react/prop-types": 0, //Here I´m disabing prop-types because i´m not using them
+          "no-console":"warn",
+          "react-hooks/rules-of-hooks": "error",
+          "react-hooks/exhaustive-deps": "warn",
+          "semi":"error",
+          "quotes":"warn",
+          "no-unused-vars":"warn"
+     },
+     "plugins": [
+          "react",
+          "import",
+          "react-hooks"
+     ], //Here i´m telling it to use these plugins
+     "parser": "babel-eslint",
+     "parserOptions": {
+          "ecmaVersion": 2018,
+          "sourceType": "module",
+          "ecmaFeatures": {
+               "experimentalObjectRestSpread": true,
+               "jsx": true
+          }
+     },
+     "env": {
+          "es6": true,
+          "commonjs": true,
+          "browser": true,
+          "node": true
+     },
+     "settings": {
+          "react": {
+               "version": "detect" //Here I´m telling eslint to figure out from my package.json what version of react i´m using
+          }
+     }
+}
