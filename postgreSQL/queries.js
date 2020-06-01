@@ -42,7 +42,7 @@ const getFilms = () => {
 	                      ,L.name as film_language
 	                      ,F.rating as film_type
 	                      ,F.rental_rate
-                    FROM film as F INNER JOIN language as L using (language_id) limit 100`;
+                    FROM film as F INNER JOIN language as L using (language_id) limit 200`;
      return db.query(query)
           .then((data) => (data))
           .catch((error) => { console.log(error); });
